@@ -1,23 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafreire <rafreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/15 11:57:35 by rafreire          #+#    #+#             */
-/*   Updated: 2025/07/15 15:10:53 by rafreire         ###   ########.fr       */
+/*   Created: 2025/07/15 15:13:10 by rafreire          #+#    #+#             */
+/*   Updated: 2025/07/15 15:13:11 by rafreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-
-	int	ft_isalpha(int c);
-	int ft_isdigit(int nb);
-	int ft_isalnum(int nb);
-	int ft_isascii(int c);
-	int	ft_isprint(int c);
-	int	ft_strlen(char *str);
-	
-#endif
