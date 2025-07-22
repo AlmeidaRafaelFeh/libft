@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafreire <rafreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/21 11:22:39 by rafreire          #+#    #+#             */
-/*   Updated: 2025/07/21 12:06:55 by rafreire         ###   ########.fr       */
+/*   Created: 2025/07/21 12:08:56 by rafreire          #+#    #+#             */
+/*   Updated: 2025/07/21 14:09:49 by rafreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t		i;
-	char		*newstr;
+	void	*ptr;
+	size_t	total;
 
-	i = 0;
-	newstr = calloc(ft_strlen(s) + 1, sizeof(char));
-	if (!newstr)
+	if (nmemb == 0 || size == 0)
+		return (malloc(0));
+	total = nmemb * size;
+	if (size != 0 && total / size != nmemb)
 		return (NULL);
-	while (s[i])
-	{
-		newstr[i] = s[i];
-		i++;
-	}
-	return (newstr);
+	ptr = malloc(total);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, total);
+	return (ptr);
 }

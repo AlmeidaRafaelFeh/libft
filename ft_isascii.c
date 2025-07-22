@@ -6,15 +6,15 @@
 /*   By: rafreire <rafreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 11:23:47 by rafreire          #+#    #+#             */
-/*   Updated: 2025/07/21 11:23:49 by rafreire         ###   ########.fr       */
+/*   Updated: 2025/07/21 12:07:15 by rafreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-	if(c >= 0 && c <= 127)
+	if (c >= 0 && c <= 127)
 	{
-		return(1);
+		return (1);
 	}
 	return (0);
 }

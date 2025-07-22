@@ -1,30 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafreire <rafreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/21 11:22:39 by rafreire          #+#    #+#             */
-/*   Updated: 2025/07/21 12:06:55 by rafreire         ###   ########.fr       */
+/*   Created: 2025/07/21 15:27:31 by rafreire          #+#    #+#             */
+/*   Updated: 2025/07/21 18:02:21 by rafreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+int	ft_toupper(int c)
 {
-	size_t		i;
-	char		*newstr;
-
-	i = 0;
-	newstr = calloc(ft_strlen(s) + 1, sizeof(char));
-	if (!newstr)
-		return (NULL);
-	while (s[i])
-	{
-		newstr[i] = s[i];
-		i++;
-	}
-	return (newstr);
+	if (c >= 'a' && c <= 'z')
+		return (c -= 32);
 }

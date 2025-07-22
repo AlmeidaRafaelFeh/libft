@@ -6,18 +6,18 @@
 /*   By: rafreire <rafreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 15:08:29 by rafreire          #+#    #+#             */
-/*   Updated: 2025/07/15 15:10:44 by rafreire         ###   ########.fr       */
+/*   Updated: 2025/07/21 12:06:21 by rafreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strlen(char *str)
 {
-	int count;
+	int	count;
 
 	count = 0;
-	while(str[count])
+	while (str[count])
 	{
 		count++;
 	}
-	return(count);
+	return (count);
 }

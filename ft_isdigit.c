@@ -6,13 +6,13 @@
 /*   By: rafreire <rafreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 14:22:15 by rafreire          #+#    #+#             */
-/*   Updated: 2025/07/15 14:29:29 by rafreire         ###   ########.fr       */
+/*   Updated: 2025/07/21 12:05:44 by rafreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int nb)
+int	ft_isdigit(int nb)
 {
-	if(nb >= '0' && nb <= '9')
+	if (nb >= '0' && nb <= '9')
 	{
 		return (1);
 	}

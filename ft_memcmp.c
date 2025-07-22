@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafreire <rafreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/21 11:22:39 by rafreire          #+#    #+#             */
-/*   Updated: 2025/07/21 12:06:55 by rafreire         ###   ########.fr       */
+/*   Created: 2025/07/21 19:15:40 by rafreire          #+#    #+#             */
+/*   Updated: 2025/07/22 10:23:34 by rafreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t		i;
-	char		*newstr;
+	size_t				i;
+	const unsigned char	*str1;
+	const unsigned char	*str2;
 
 	i = 0;
-	newstr = calloc(ft_strlen(s) + 1, sizeof(char));
-	if (!newstr)
-		return (NULL);
-	while (s[i])
+	str1 = (const unsigned char *)s1;
+	str2 = (const unsigned char *)s2;
+	while (i < n)
 	{
-		newstr[i] = s[i];
+		if ((str1[n] != str2[n]))
+			return (str1[i] - str2[i]);
 		i++;
 	}
-	return (newstr);
+	return (0);
 }

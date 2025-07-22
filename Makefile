@@ -1,9 +1,8 @@
 NAME = libft.a
-OBJDIR = objs
 INCDIR = includes
 SRCS =	ft_isalnum.c \
 		ft_isalpha.c \
-		ft_isascii.c \ 
+		ft_isascii.c \
 		ft_isdigit.c \
 		ft_isprint.c \
 		ft_strlen.c \
@@ -25,21 +24,21 @@ SRCS =	ft_isalnum.c \
 		ft_calloc.c \
 		ft_strdup.c 
 
-OBJS = $(SRCS:%.c = %.o)
+OBJS = $(SRCS:.c=.o)
 
 CC =	cc
-CFLAGS =	-Wall -Wextra -Werror -g3
+CFLAGS =	-Wall -Wextra -Werror -I$(INCDIR) -g3
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-		ar rcs $(NAME) $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f *.o
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)

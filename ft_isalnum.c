@@ -6,15 +6,15 @@
 /*   By: rafreire <rafreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 14:23:40 by rafreire          #+#    #+#             */
-/*   Updated: 2025/07/15 14:33:20 by rafreire         ###   ########.fr       */
+/*   Updated: 2025/07/21 12:08:21 by rafreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum(int nb)
+int	ft_isalnum(int nb)
 {
-	if (nb >= '0' && nb <= '9' ||
-		nb >= 'a' && nb <= 'z' ||
-		nb >= 'A' && nb <= 'Z')
+	if (nb >= '0' && nb <= '9'
+		|| nb >= 'a' && nb <= 'z'
+		|| nb >= 'A' && nb <= 'Z')
 	{
 		return (1);
 	}
