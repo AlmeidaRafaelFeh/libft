@@ -6,11 +6,11 @@
 /*   By: rafreire <rafreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 15:08:29 by rafreire          #+#    #+#             */
-/*   Updated: 2025/07/21 12:06:21 by rafreire         ###   ########.fr       */
+/*   Updated: 2025/07/22 10:32:58 by rafreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int	count;
 

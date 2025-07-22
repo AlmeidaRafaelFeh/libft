@@ -6,7 +6,7 @@
 /*   By: rafreire <rafreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 19:03:48 by rafreire          #+#    #+#             */
-/*   Updated: 2025/07/21 19:18:33 by rafreire         ###   ########.fr       */
+/*   Updated: 2025/07/22 10:37:08 by rafreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return ((char *)&str[i]);
 	i++;
 	}
+	return (0);
 }
