@@ -6,13 +6,13 @@
 /*   By: rafreire <rafreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 15:00:02 by rafreire          #+#    #+#             */
-/*   Updated: 2025/07/22 19:13:45 by rafreire         ###   ########.fr       */
+/*   Updated: 2025/07/24 14:05:34 by rafreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_min(size_t s_len, unsigned int start, size_t len);
+static size_t	ft_min(size_t s_len, unsigned int start, size_t len);
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {	
@@ -21,6 +21,8 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	size_t	real_len;
 	char	*newstr;	
 
+	if (!s)
+		return (0);
 	i = 0;
 	s_len = ft_strlen(s);
 	real_len = ft_min(s_len, start, len);
@@ -40,7 +42,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	return (newstr);
 }
 
-size_t	ft_min(size_t s_len, unsigned int start, size_t len)
+static size_t	ft_min(size_t s_len, unsigned int start, size_t len)
 {
 	if (s_len < start)
 		return (0);

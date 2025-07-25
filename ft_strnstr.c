@@ -6,7 +6,7 @@
 /*   By: rafreire <rafreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 19:37:40 by rafreire          #+#    #+#             */
-/*   Updated: 2025/07/22 10:38:58 by rafreire         ###   ########.fr       */
+/*   Updated: 2025/07/24 10:45:26 by rafreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	while (big[i] && i < len)
 	{
 		j = 0;
-		while (big[i + j] == little[j] && i + j < len)
+		while (big[i + j] && big[i + j] == little[j] && i + j < len)
 		j++;
 		if (little[j] == '\0')
 			return ((char *)&big[i]);
