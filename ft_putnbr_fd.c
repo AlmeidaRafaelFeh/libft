@@ -6,7 +6,7 @@
 /*   By: rafreire <rafreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 19:56:06 by rafreire          #+#    #+#             */
-/*   Updated: 2025/07/26 20:21:48 by rafreire         ###   ########.fr       */
+/*   Updated: 2025/07/27 19:00:33 by rafreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,10 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd('-', fd);
 	}
 	if (nb == 0)
-		write(fd, "0", 2);
+	{
+		write(fd, "0", 1);
+		return ;
+	}
 	if (nb > 9)
 		ft_putnbr_fd(nb / 10, fd);
 	ft_putchar_fd(('0' + (nb % 10)), fd);

@@ -60,10 +60,6 @@ $(NAME): $(OBJS)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-so: clean
-	$(CC) -fPIC $(CFLAGS) -c $(SRCS)
-	$(CC) -shared -o libft.so $(OBJS)
-
 bonus: $(NAME)
 	$(MAKE) OBJS="$(OBJS) $(OBJBONUS)" all
 
