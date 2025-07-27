@@ -35,9 +35,21 @@ SRCS =	ft_isalnum.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c 
 		
+SRCSBONUS = \
+		ft_lstnew_bonus.c \
+		ft_lstadd_front_bonus.c \
+		ft_lstsize_bonus.c \
+		ft_lstlast_bonus.c \
+		ft_lstadd_back_bonus.c \
+		ft_lstdelone_bonus.c \
+		ft_lstclear_bonus.c \
+		ft_lstiter_bonus.c \
+		ft_lstmap_bonus.c
+		
 OBJS = $(SRCS:.c=.o)
+OBJBONUS = $(SRCSBONUS:.c=.o)
 
-CC =	gcc
+CC =	cc
 CFLAGS =	-Wall -Wextra -Werror -I$(INCDIR) -g3
 
 all: $(NAME)
@@ -52,11 +64,11 @@ so: clean
 	$(CC) -fPIC $(CFLAGS) -c $(SRCS)
 	$(CC) -shared -o libft.so $(OBJS)
 
-bonus: 
-	@echo "nao tem"
+bonus: $(NAME)
+	$(MAKE) OBJS="$(OBJS) $(OBJBONUS)" all
 
 clean:
-	rm -f $(OBJS)
+	rm -f *.o
 
 fclean: clean
 	rm -f $(NAME)
