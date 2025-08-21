@@ -61,14 +61,15 @@ SRCS = \
 	src/printf/ft_print_nbr.c \
 	src/printf/ft_printf.c \
 	\
-		
+
 OBJS = $(SRCS:src/%.c=$(OBJDIR)/%.o)
 
 CC =	cc
 CFLAGS =	-Wall -Wextra -Werror -I$(INCDIR)
 
-print_banner:
-	@echo "                       .,,uod8B8bou,,."
+clear:
+	$(MAKE) -s all
+		@echo "                       .,,uod8B8bou,,."
 	@echo "              ..,uod8BBBBBBBBBBBBBBBBRPFT?l!i:."
 	@echo "         ,=m8BBBBBBBBBBBBBBBRPFT?!||||||||||||||"
 	@echo "         !...:!TVBBBRPFT||||||||||!!^^\"\"'  |||||"
@@ -102,9 +103,6 @@ print_banner:
 	@echo "                \`!!8888888888888888899fT|!^\"'"
 	@echo "                  \`!988888888899fT|!^\"'"
 	@echo "                    \`!9899fT|!^\"'"
-
-clear:
-	$(MAKE) -s all
 
 all: $(NAME)
 
